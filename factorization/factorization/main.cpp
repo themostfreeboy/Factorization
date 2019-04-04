@@ -217,7 +217,7 @@ void test1()
     uint64 test_number = 7140229933;
     vector<uint64> prime = generate_prime(sqrt((long double)test_number));
     // print_vector(prime);
-    print_factorize_number(test_number, factorize((long double)test_number, prime));
+    print_factorize_number(test_number, factorize(test_number, prime));
 }
 
 void test2()
@@ -228,7 +228,7 @@ void test2()
     // print_vector(prime);
     for (uint64 cur_number = start_number; cur_number <= end_number; ++cur_number)
     {
-        print_factorize_number(cur_number, factorize((long double)cur_number, prime));
+        print_factorize_number(cur_number, factorize(cur_number, prime));
     }
 }
 
@@ -240,7 +240,7 @@ void test3()
     // print_vector(prime);
     for (uint64 cur_number = start_number; cur_number <= end_number; ++cur_number)
     {
-        vector<uint64> factorize_result = factorize((long double)cur_number, prime);
+        vector<uint64> factorize_result = factorize(cur_number, prime);
         if (factorize_result.size() == 2)
         {
             print_factorize_number(cur_number, factorize_result);
