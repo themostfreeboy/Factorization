@@ -19,7 +19,7 @@ uint64 qpow(uint64 a, uint64 n, uint64 mod)
     uint64 ret = 1;
     while (n)
     {
-        if(n & 1)
+        if (n & 1)
         {
             ret = qmul(ret, a, mod);
         }
